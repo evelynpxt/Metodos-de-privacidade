@@ -1,1 +1,200 @@
+public class Filme {
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos; 
+//...
+
+
+public void setNome(String nome){
+    this.nome = nome;
+}
+
+public void setAnoDeLancamento(int anoDeLancamento){
+    this.anoDeLancamento = anoDeLancamento;
+}
+
+public void setIncluidoNoPlano(boolean incluidoNoPlano){
+    this.incluidoNoPlano = incluidoNoPlano;
+}
+
+
+public void setDuracaoEmMinutos(int duracaoEmMinutos){
+    this.duracaoEmMinutos = duracaoEmMinutos;
+}
+
+public void setNome(String nome){
+    this.nome = nome;
+}
+
+
+
+
+public String getNome() {
+    return nome;
+}
+
+public int geAnoDeLancamento() {
+    return anoDeLancamento;
+}
+
+public boolean getIncluidoNoPlano() {
+    return incluidoNoPlano;
+}
+
+public int getTotalDeAvaliacoes(){
+    return totalDeAvaliacoes;
+}
+
+public int getDuracaoEmMinutos() {
+    return duracaoEmMinutos;
+}
+
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+//...
+
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+
+
+Exercicio
+
+public class Conta { 
+    private double saldo;
+    private int numero;
+
+    public void deposita(double valor) {
+        saldo = saldo + valor;
+    }
+}
+
+
+public class Lampada {
+    private boolean ligada;
+    private String modelo;
+
+    public void acendeLampada(boolean ligada) {
+       ligada = ligada;
+    }
+}
+
+public class Lampada {
+    private boolean ligada;
+    private String modelo;
+
+    public void acendeLampada(boolean ligada) {
+       this.ligada = ligada;
+    }
+}
+
+
+Corrigindo Projeto 
+
+package br.com.alura.screenmatch.modelos;
+
+public class Filme {
+
+    private String nome;
+    private int anoDeLancamento;
+    private int duracaoEmMinutos;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Duração em minutos: " + duracaoEmMinutos);
+        System.out.println("Incluído no plano: " + incluidoNoPlano);
+    }
+
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double pegaMedia() {
+        if (totalDeAvaliacoes == 0) {
+            return 0.0; // Evita divisão por zero
+        }
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+    // Getters e Setters
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+}
+
+
+import br.com.alura.screenmatch.modelos.Filme;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        Filme favorito = new Filme();
+
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracaoEmMinutos(135);
+        favorito.setIncluidoNoPlano(true);
+
+        favorito.exibeFichaTecnica();
+        favorito.avalia(9);
+        favorito.avalia(8);
+        favorito.avalia(9);
+
+        System.out.println("Média de avaliações do filme: " + favorito.pegaMedia());
+    }
+
+}
+
+
+
+
+
 
