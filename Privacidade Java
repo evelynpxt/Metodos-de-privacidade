@@ -193,6 +193,147 @@ public class Principal {
 
 }
 
+Implementando o metodo 
+
+public class ContaBancaria {
+    private int numeroConta;
+    private double saldo;
+    public String titular;
+
+    public int getNumeroConta() {
+        return numeroConta;
+    }
+
+    public void setNumeroConta(int numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+}
+
+public class IdadePessoa {
+    private String nome;
+    private int idade;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void verificarIdade() {
+        if (idade >= 18) {
+            System.out.println(nome + " é maior de idade.");
+        } else {
+            System.out.println(nome + " não é maior de idade.");
+        }
+    }
+}
+
+public class Produto {
+    private String nome;
+    private double preco;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public void aplicarDesconto(double percentualDesconto) {
+        this.preco -= (this.preco * (percentualDesconto / 100));
+    }
+}
+
+public class Aluno {
+    private String nome;
+    private double[] notas;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
+
+    public double calcularMedia() {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
+    }
+}
+
+public class Livro {
+    private String titulo;
+    private String autor;
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+    }
+}
+
 
 
 
